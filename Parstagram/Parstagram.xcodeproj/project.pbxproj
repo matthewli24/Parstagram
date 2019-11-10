@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		1590A18123779F81002B523D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1590A18023779F81002B523D /* LoginViewController.swift */; };
 		1590A18323779F8E002B523D /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1590A18223779F8E002B523D /* FeedViewController.swift */; };
+		1590A18523789A96002B523D /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1590A18423789A96002B523D /* CameraViewController.swift */; };
+		1590A1882378B427002B523D /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1590A1872378B427002B523D /* PostTableViewCell.swift */; };
 		1598B42F237768860088E210 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1598B42E237768860088E210 /* AppDelegate.swift */; };
 		1598B431237768860088E210 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1598B430237768860088E210 /* SceneDelegate.swift */; };
 		1598B436237768860088E210 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1598B434237768860088E210 /* Main.storyboard */; };
@@ -22,6 +24,8 @@
 		06612DB2DBD5A81FA653FF81 /* Pods-Parstagram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Parstagram.release.xcconfig"; path = "Target Support Files/Pods-Parstagram/Pods-Parstagram.release.xcconfig"; sourceTree = "<group>"; };
 		1590A18023779F81002B523D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		1590A18223779F8E002B523D /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		1590A18423789A96002B523D /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		1590A1872378B427002B523D /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 		1598B42B237768860088E210 /* Parstagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Parstagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1598B42E237768860088E210 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1598B430237768860088E210 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,8 +70,17 @@
 			children = (
 				1590A18023779F81002B523D /* LoginViewController.swift */,
 				1590A18223779F8E002B523D /* FeedViewController.swift */,
+				1590A18423789A96002B523D /* CameraViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		1590A1862378B3F5002B523D /* Custom UITableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				1590A1872378B427002B523D /* PostTableViewCell.swift */,
+			);
+			path = "Custom UITableViewCell";
 			sourceTree = "<group>";
 		};
 		1598B422237768860088E210 = {
@@ -91,6 +104,7 @@
 		1598B42D237768860088E210 /* Parstagram */ = {
 			isa = PBXGroup;
 			children = (
+				1590A1862378B3F5002B523D /* Custom UITableViewCell */,
 				1590A17F23779F64002B523D /* Controllers */,
 				1598B42E237768860088E210 /* AppDelegate.swift */,
 				1598B430237768860088E210 /* SceneDelegate.swift */,
@@ -229,9 +243,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				1590A18123779F81002B523D /* LoginViewController.swift in Sources */,
+				1590A18523789A96002B523D /* CameraViewController.swift in Sources */,
 				1598B42F237768860088E210 /* AppDelegate.swift in Sources */,
 				1590A18323779F8E002B523D /* FeedViewController.swift in Sources */,
 				1598B431237768860088E210 /* SceneDelegate.swift in Sources */,
+				1590A1882378B427002B523D /* PostTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

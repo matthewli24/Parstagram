@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1590A18123779F81002B523D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1590A18023779F81002B523D /* LoginViewController.swift */; };
+		1590A18323779F8E002B523D /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1590A18223779F8E002B523D /* FeedViewController.swift */; };
 		1598B42F237768860088E210 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1598B42E237768860088E210 /* AppDelegate.swift */; };
 		1598B431237768860088E210 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1598B430237768860088E210 /* SceneDelegate.swift */; };
-		1598B433237768860088E210 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1598B432237768860088E210 /* ViewController.swift */; };
 		1598B436237768860088E210 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1598B434237768860088E210 /* Main.storyboard */; };
 		1598B438237768870088E210 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1598B437237768870088E210 /* Assets.xcassets */; };
 		1598B43B237768870088E210 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1598B439237768870088E210 /* LaunchScreen.storyboard */; };
@@ -19,10 +20,11 @@
 /* Begin PBXFileReference section */
 		0588CD7E084AAFCF820B4194 /* Pods_Parstagram.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Parstagram.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		06612DB2DBD5A81FA653FF81 /* Pods-Parstagram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Parstagram.release.xcconfig"; path = "Target Support Files/Pods-Parstagram/Pods-Parstagram.release.xcconfig"; sourceTree = "<group>"; };
+		1590A18023779F81002B523D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		1590A18223779F8E002B523D /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		1598B42B237768860088E210 /* Parstagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Parstagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1598B42E237768860088E210 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1598B430237768860088E210 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		1598B432237768860088E210 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1598B435237768860088E210 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1598B437237768870088E210 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1598B43A237768870088E210 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -48,7 +50,6 @@
 				C88151A292E19AE0D2F1C3F5 /* Pods-Parstagram.debug.xcconfig */,
 				06612DB2DBD5A81FA653FF81 /* Pods-Parstagram.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -58,6 +59,15 @@
 				0588CD7E084AAFCF820B4194 /* Pods_Parstagram.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1590A17F23779F64002B523D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1590A18023779F81002B523D /* LoginViewController.swift */,
+				1590A18223779F8E002B523D /* FeedViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		1598B422237768860088E210 = {
@@ -81,9 +91,9 @@
 		1598B42D237768860088E210 /* Parstagram */ = {
 			isa = PBXGroup;
 			children = (
+				1590A17F23779F64002B523D /* Controllers */,
 				1598B42E237768860088E210 /* AppDelegate.swift */,
 				1598B430237768860088E210 /* SceneDelegate.swift */,
-				1598B432237768860088E210 /* ViewController.swift */,
 				1598B434237768860088E210 /* Main.storyboard */,
 				1598B437237768870088E210 /* Assets.xcassets */,
 				1598B439237768870088E210 /* LaunchScreen.storyboard */,
@@ -218,8 +228,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1598B433237768860088E210 /* ViewController.swift in Sources */,
+				1590A18123779F81002B523D /* LoginViewController.swift in Sources */,
 				1598B42F237768860088E210 /* AppDelegate.swift in Sources */,
+				1590A18323779F8E002B523D /* FeedViewController.swift in Sources */,
 				1598B431237768860088E210 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

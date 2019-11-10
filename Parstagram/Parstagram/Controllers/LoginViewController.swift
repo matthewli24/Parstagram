@@ -19,30 +19,61 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
     }
     
+    
+    // MARK: - Private Functions
+    
+    private func showErrorAlert(title: String, message: String) {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let OKAction = UIAlertAction(title: "OK", style: .default)
+        alertController.addAction(OKAction)
+        present(alertController, animated: true)
+    }
+    
     // MARK: - Actions
     
     @IBAction func onSignUpPressed(_ sender: Any) {
+        guard let username = usernameTextField.text,
+              let password = passwordTextField.text else {
+                return
+        }
+        
         let user = PFUser()
-        user.username = usernameTextField.text
-        user.password = passwordTextField.text
+        user.username = username
+        user.password = password
+        
+        
+        let errorMessage = "Please Fill In All Fields"
+        if username.isEmpty || password.isEmpty {
+          showErrorAlert(title: "Cannot Sign Up", message: errorMessage)
+        }
+        
         user.signUpInBackground { (success, error) in
             if success {
                 self.performSegue(withIdentifier: "loginSegue", sender: nil)
             } else {
-                print("Error: \(error?.localizedDescription)")
+                let err = "Error: \(error?.localizedDescription ?? "Error Signing Up")"
+                self.showErrorAlert(title: "Error Signing Up", message: err)
             }
         }
     }
     
     @IBAction func onSignInPressed(_ sender: Any) {
-        let username = usernameTextField.text!
-        let password = passwordTextField.text!
+        guard let username = usernameTextField.text,
+            let password = passwordTextField.text else {
+                return
+        }
+        
+        let errorMessage = "Please Fill In All Fields"
+        if username.isEmpty || password.isEmpty {
+            showErrorAlert(title: "Cannot Sign In", message: errorMessage)
+        }
         
         PFUser.logInWithUsername(inBackground: username, password: password) { (user, error) in
             if user != nil {
                 self.performSegue(withIdentifier: "loginSegue", sender: nil)
             } else {
-                print("Error: \(error?.localizedDescription)")
+                let err = "Error: \(error?.localizedDescription ?? "Error Signing In")"
+                self.showErrorAlert(title: "Error Logging In", message: err)
             }
             
         }

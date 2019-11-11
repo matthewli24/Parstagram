@@ -16,30 +16,49 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     // MARK: - Props
     @IBOutlet var tableView: UITableView!
     var posts = [PFObject]()
+    var refreshControl = UIRefreshControl()
+    var numberOfPosts: Int! = 8
     
     override func viewDidLoad() {
         super.viewDidLoad()
         DataRequest.addAcceptableImageContentTypes(["application/octet-stream"])
         tableView.delegate = self
         tableView.dataSource = self
+        
+        refreshControl.addTarget(self, action: #selector(getPosts), for: .valueChanged)
+        tableView.refreshControl = refreshControl
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        getPosts(numberOfPosts: numberOfPosts)
         
+    }
+    
+    // MARK: -Private Functions
+    
+    @objc private func getPosts(numberOfPosts: Int) {
         let query = PFQuery(className: "Posts")
         query.includeKey("author")
-        query.limit = 20
+        query.limit = numberOfPosts
+        query.order(byDescending: "createdAt") 
         
         query.findObjectsInBackground { (posts, error) in
             if posts != nil {
                 self.posts = posts!
                 self.tableView.reloadData()
+                self.refreshControl.endRefreshing()
             } else {
                 print("Error: \(error?.localizedDescription ?? "Error Fetching Posts")")
             }
         }
     }
+    
+    private func getMorePosts() {
+        numberOfPosts += 5
+        getPosts(numberOfPosts: numberOfPosts)
+    }
+    
     
     // MARK: - UITableView DataSource
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -58,13 +77,16 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         let imageFile = post["image"] as! PFFileObject
         let urlString = imageFile.url!
         let url = URL(string: urlString)!
-        
-        print(url)
+
         cell.photoImageView.af_setImage(withURL: url)
         
         return cell
     }
        
-  
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if indexPath.row + 1 == posts.count {
+            getMorePosts()
+        }
+    }
 
 }

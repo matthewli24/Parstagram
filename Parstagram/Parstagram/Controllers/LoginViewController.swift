@@ -15,8 +15,12 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
+    var initialY: CGFloat!
+    var offset: CGFloat!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
     }
     
     
@@ -77,6 +81,11 @@ class LoginViewController: UIViewController {
             }
             
         }
+    }
+    
+    
+    @IBAction func onTap(_ sender: Any) {
+        view.endEditing(true)
     }
     
 }

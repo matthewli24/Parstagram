@@ -45,3 +45,11 @@ The following **bonus** features are implemented:
 Here's a walkthrough of implemented user stories:
 
 <img src='./parstagramDemo1.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
+### Notes:
+
+- starting parse dashboard 
+
+```
+parse-dashboard --appId Parstagram --masterKey myMasterKey123 --serverURL "https://shrouded-stream-64864.herokuapp.com/parse"
+```

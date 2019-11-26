@@ -16,6 +16,7 @@
 		1598B436237768860088E210 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1598B434237768860088E210 /* Main.storyboard */; };
 		1598B438237768870088E210 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1598B437237768870088E210 /* Assets.xcassets */; };
 		1598B43B237768870088E210 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1598B439237768870088E210 /* LaunchScreen.storyboard */; };
+		15EA2A93238CD58A00A51DC8 /* CommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15EA2A92238CD58A00A51DC8 /* CommentTableViewCell.swift */; };
 		DAD6E0B336F8D782F8126682 /* Pods_Parstagram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0588CD7E084AAFCF820B4194 /* Pods_Parstagram.framework */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +34,7 @@
 		1598B437237768870088E210 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1598B43A237768870088E210 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1598B43C237768870088E210 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		15EA2A92238CD58A00A51DC8 /* CommentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentTableViewCell.swift; sourceTree = "<group>"; };
 		C88151A292E19AE0D2F1C3F5 /* Pods-Parstagram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Parstagram.debug.xcconfig"; path = "Target Support Files/Pods-Parstagram/Pods-Parstagram.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -79,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				1590A1872378B427002B523D /* PostTableViewCell.swift */,
+				15EA2A92238CD58A00A51DC8 /* CommentTableViewCell.swift */,
 			);
 			path = "Custom UITableViewCell";
 			sourceTree = "<group>";
@@ -197,6 +200,7 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
 				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/MessageInputBar/MessageInputBar.framework",
 				"${BUILT_PRODUCTS_DIR}/Parse/Parse.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -206,6 +210,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MessageInputBar.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Parse.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -246,6 +251,7 @@
 				1590A18523789A96002B523D /* CameraViewController.swift in Sources */,
 				1598B42F237768860088E210 /* AppDelegate.swift in Sources */,
 				1590A18323779F8E002B523D /* FeedViewController.swift in Sources */,
+				15EA2A93238CD58A00A51DC8 /* CommentTableViewCell.swift in Sources */,
 				1598B431237768860088E210 /* SceneDelegate.swift in Sources */,
 				1590A1882378B427002B523D /* PostTableViewCell.swift in Sources */,
 			);

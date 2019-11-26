@@ -24,8 +24,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         if let currentUser = PFUser.current() {
             print("Welcome Back \(currentUser.username!)")
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let feedViewController = storyboard.instantiateViewController(identifier: "FeedViewController")
-            window?.rootViewController = feedViewController
+            let feedNavController = storyboard.instantiateViewController(identifier: "FeedNavController")
+            window?.rootViewController = feedNavController
         }
     }
 
